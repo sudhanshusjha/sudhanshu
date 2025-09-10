@@ -10,21 +10,21 @@ class PortfolioService:
     
     @staticmethod
     async def initialize_portfolio_data():
-        """Initialize portfolio with Sudhanshu's data"""
+        """Initialize portfolio with Sudhanshu's updated data"""
         
-        # Sudhanshu's actual portfolio data
+        # Sudhanshu's updated portfolio data
         portfolio_data = PortfolioData(
             personal=PersonalInfo(
                 name="Sudhanshu Shekhar Jha",
-                title="Senior Technical Product Manager | Technical Program Manager",
-                tagline="Bridging Technical Excellence with Product Strategy for Enterprise Scale",
-                location="Noida, India",
+                title="Senior Technical Product & Program Leader | Gen AI Powered",
+                tagline="Strategic Vision • Cross-Functional Orchestration • Outcome-Driven Leadership",
+                location="Greater Noida West, India",
                 email="sudhanshurg@gmail.com",
-                phone="+91-7303436488",
-                linkedin="https://linkedin.com/in/sudhanshu-jha",
-                profileImage="https://customer-assets.emergentagent.com/job_10923360-8331-4d70-bd11-435e06088727/artifacts/u8qrmsxw_Sudhanshu.jpeg",
-                yearsExperience="18+",
-                domain="SaaS • Healthcare • Data & Delivery"
+                phone="+91-7303436488, +91-9650261122",
+                linkedin="https://www.linkedin.com/in/sudhanshu-s-jha/",
+                profileImage="https://customer-assets.emergentagent.com/job_portfolio-pro-96/artifacts/9k9r7grb_WhatsApp%20Image%202025-09-10%20at%2019.48.04.jpeg",
+                yearsExperience="19+",
+                domain="IT & Tech Experience • Healthcare • SaaS • Enterprise"
             ),
             about=AboutInfo(
                 summary="Senior Technical Product & Program Manager with 18+ years of IT experience, combining deep technical expertise (.NET, SQL, APIs) with strategic product leadership. Specialized in end-to-end product lifecycle management, program governance, and delivery execution in regulated domains like US Healthcare and Enterprise SaaS.",
