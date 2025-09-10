@@ -162,8 +162,7 @@ export const mockData = {
       impact: "Delivered significant cost savings while maintaining data integrity and compliance requirements.",
       metrics: {
         costReduction: "30%",
-        efficiency: "20%",
-        savings: "$2M+ annually"
+        efficiency: "20%"
       }
     },
     {
