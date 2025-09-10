@@ -195,7 +195,7 @@ const Projects = () => {
           <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
             Cumulative Leadership Impact
           </h3>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
               <div className="text-gray-700 font-medium">Average Cost Reduction</div>
@@ -210,11 +210,6 @@ const Projects = () => {
               <div className="text-3xl font-bold text-purple-600 mb-2">40%</div>
               <div className="text-gray-700 font-medium">Decision Speed Improvement</div>
               <div className="text-sm text-gray-600 mt-1">Executive dashboard systems</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">$2M+</div>
-              <div className="text-gray-700 font-medium">Annual Cost Savings</div>
-              <div className="text-sm text-gray-600 mt-1">Data & infrastructure optimization</div>
             </div>
           </div>
         </div>
