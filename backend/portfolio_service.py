@@ -23,7 +23,7 @@ class PortfolioService:
                 phone="+91-7303436488, +91-9650261122",
                 linkedin="https://www.linkedin.com/in/sudhanshu-s-jha/",
                 profileImage="https://customer-assets.emergentagent.com/job_portfolio-pro-96/artifacts/9k9r7grb_WhatsApp%20Image%202025-09-10%20at%2019.48.04.jpeg",
-                yearsExperience="19+",
+                yearsExperience="18+",
                 domain="IT & Tech Experience • Healthcare • SaaS • Enterprise"
             ),
             about=AboutInfo(
