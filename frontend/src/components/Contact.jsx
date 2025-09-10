@@ -275,10 +275,11 @@ const Contact = () => {
 
               <Button 
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-all duration-200 hover:scale-[1.02]"
+                disabled={submitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-all duration-200 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4 mr-2" />
-                Send Message
+                {submitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
 
