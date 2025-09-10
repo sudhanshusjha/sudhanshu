@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
-import mockData from '../mock';
+import ApiService from '../services/api';
 
 const Hero = () => {
   const { personal } = mockData;
