@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Linkedin, Mail, Phone } from 'lucide-react';
-import mockData from '../mock';
+import ApiService from '../services/api';
 
 const Footer = () => {
-  const { personal } = mockData;
+  const [portfolioData, setPortfolioData] = useState(null);
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    const fetchPortfolioData = async () => {
+      try {
+        const data = await ApiService.getPortfolio();
+        setPortfolioData(data);
+      } catch (err) {
+        console.error('Failed to load portfolio data:', err);
+      }
+    };
+
+    fetchPortfolioData();
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Fallback data if API fails
+  const personal = portfolioData?.personal || {
+    name: "Sudhanshu Shekhar Jha",
+    email: "sudhanshurg@gmail.com",
+    phone: "+91-7303436488",
+    linkedin: "https://linkedin.com/in/sudhanshu-jha",
+    yearsExperience: "18+",
+    location: "Noida, India"
   };
 
   return (

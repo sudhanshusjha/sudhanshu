@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Target, Settings, BarChart3, Users2, Code } from 'lucide-react';
-import mockData from '../mock';
+import ApiService from '../services/api';
 
 const Skills = () => {
-  const { skills } = mockData;
+  const [portfolioData, setPortfolioData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPortfolioData = async () => {
+      try {
+        const data = await ApiService.getPortfolio();
+        setPortfolioData(data);
+        // Log page view for analytics
+        ApiService.logPageView('skills');
+      } catch (err) {
+        console.error('Failed to load portfolio data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPortfolioData();
+  }, []);
+
+  if (loading) {
+    return (
+      <section id="skills" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading skills information...</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (!portfolioData) {
+    return null;
+  }
+
+  const { skills } = portfolioData;
 
   const skillCategories = [
     {
