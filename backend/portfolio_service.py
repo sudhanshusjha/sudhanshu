@@ -260,25 +260,29 @@ class PortfolioService:
                 )
             ],
             certifications=[
-                "ISB Product Management",
-                "Project Management Professional (PMP)",
-                "Professional Scrum Product Owner (PSPO)",
-                "Professional Scrum Master (PSM)", 
-                "Scaled Professional Scrum (SPS)",
-                "Google AI Essentials"
+                "ISB Certified Product Manager",
+                "Project Management Professional (PMP) - Google Accredited",
+                "Professional Scrum Product Owner (PSPO) - Scrum.org",
+                "Professional Scrum Master (PSM) - Scrum.org", 
+                "Scaled Professional Scrum (SPS) - Scrum.org",
+                "Google Certified AI Professional - Google AI Essentials"
             ],
             achievements=[
                 Achievement(
-                    title="Philips Recognition",
-                    description="Awarded by Philips for error-free data transfer within timelines"
+                    title="Philips Client Recognition",
+                    description="Awarded by client (Philips) for error-free data transfer within timelines"
                 ),
                 Achievement(
-                    title="Serco Pulse Award",
-                    description="Best Employee (India) - Serco Global Services"
+                    title="Serco Pulse Award - Best Employee",
+                    description="Honored 'Serco Pulse Award – Best Employee (India) of the year' by Serco Global Services"
                 ),
                 Achievement(
-                    title="Tech PMx Junction",
-                    description="Author of professional newsletter sharing real-world lessons in product, project, and program management"
+                    title="Tech PMx Junction Newsletter Author",
+                    description="Author of Tech PMx Junction newsletter dedicated to real-world lessons in product, project, and program management with strategic vision insights"
+                ),
+                Achievement(
+                    title="Director/Head Level Leadership Position",
+                    description="Positioned for Director/Head of Product/Head of Program leadership roles based on strategic vision and execution excellence"
                 )
             ]
         )
