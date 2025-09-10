@@ -41,44 +41,54 @@ class PortfolioService:
             ),
             skills=SkillsInfo(
                 productManagement=[
+                    "Product Vision & Roadmapping",
+                    "Product Strategy & Execution", 
                     "Product Lifecycle Management",
-                    "Roadmaps & PRDs", 
-                    "Go-to-Market Strategy",
-                    "Feature Prioritization",
-                    "Market Research",
-                    "Customer-Centric Development"
+                    "Product Requirements (PRDs, User Stories)",
+                    "Feature Ownership & Prioritization",
+                    "Customer Discovery & VOC",
+                    "Data-Driven Feature Prioritization",
+                    "Continuous Improvement & Post-Release Metrics"
                 ],
                 programDelivery=[
-                    "Technical Program Management",
-                    "Program Governance",
-                    "Risk Mitigation",
-                    "Change Management",
-                    "Resource Management",
-                    "Release Planning"
+                    "Technical Program Management (TPM)",
+                    "Program & Project Governance",
+                    "Portfolio Oversight & Budget Management",
+                    "Agile Program Delivery",
+                    "Sprint Planning & Release Governance",
+                    "Risk & Dependency Tracking",
+                    "Benefits Realization & Value Stream",
+                    "End-to-End Program Delivery"
                 ],
                 dataAndAI=[
-                    "Advanced SQL",
-                    "Power BI & SSRS",
-                    "KPI Dashboards",
-                    "Data Archival & Retention",
-                    "Gen AI-powered Analytics",
-                    "Reporting Automation"
+                    "Gen AI & Advanced SQL",
+                    "Power BI, SSRS, SSIS",
+                    "KPI Dashboards & Reporting",
+                    "Data-Driven Decision Making",
+                    "EHR/EMR Integrations (HL7, FHIR)",
+                    "Clinical Data Interchange",
+                    "Data Archival & Purging Programs",
+                    "Metrics Definition & Analytics"
                 ],
                 leadership=[
-                    "Stakeholder Management",
-                    "Executive Communication",
-                    "Global Team Leadership",
+                    "C-Level Stakeholder Communication",
                     "Cross-Functional Collaboration",
-                    "Mentoring & Coaching",
-                    "Vendor Coordination"
+                    "Matrix Leadership & Global Teams",
+                    "Executive Storytelling & Communication",
+                    "Coaching, Mentoring & Team Enablement",
+                    "Change Enablement & Learning",
+                    "Conflict Resolution & Escalation",
+                    "Vendor & Partner Coordination"
                 ],
                 technical=[
-                    ".NET Development",
-                    "API Integrations",
-                    "SaaS Platforms",
+                    "CRM & TMS Platforms",
+                    "API Integrations & SaaS",
                     "JIRA & Azure DevOps",
                     "Confluence & GitHub",
-                    "Enterprise Integrations"
+                    "Agile Ceremonies & Tools",
+                    "HIPAA Compliance",
+                    "Enterprise Integrations",
+                    "Flow Metrics & Sprint Health"
                 ]
             ),
             experience=[
