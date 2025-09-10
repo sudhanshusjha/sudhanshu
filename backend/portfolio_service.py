@@ -165,97 +165,97 @@ class PortfolioService:
             projects=[
                 ProjectItem(
                     id=1,
-                    title="EHR Analytics & Provider Engagement Platform",
+                    title="EHR Analytics & Provider Engagement Platform Evolution",
                     category="Product Strategy & Analytics",
-                    description="Defined comprehensive product strategy and roadmap for Electronic Health Record analytics platform, driving significant improvements in provider engagement and client satisfaction.",
+                    description="Led strategic product evolution for Electronic Health Record analytics platform, focusing on provider engagement solutions with comprehensive data visualization and dashboard capabilities.",
                     achievements=[
-                        "30% increase in provider engagement",
-                        "20% improvement in client satisfaction", 
-                        "Enhanced analytics capabilities for healthcare providers",
-                        "HIPAA, HL7, FHIR compliance alignment"
+                        "30% increase in provider engagement through strategic product initiatives",
+                        "20% improvement in client satisfaction by aligning features with business needs", 
+                        "Enhanced data visualization and dashboarding solutions",
+                        "HIPAA, HL7, FHIR compliance alignment and regulatory framework adherence"
                     ],
-                    technologies=["Healthcare Analytics", "EHR Integration", "HL7/FHIR", "Power BI", "SQL"],
-                    impact="Transformed healthcare provider experience through data-driven insights and improved engagement strategies.",
+                    technologies=["Healthcare Analytics", "EHR Integration", "HL7/FHIR", "Power BI", "SQL", "Data Visualization"],
+                    impact="Transformed healthcare provider experience through strategic product vision and improved engagement strategies.",
                     metrics={
                         "engagement": "30%",
                         "satisfaction": "20%",
-                        "timeline": "12 months"
+                        "timeline": "18 months"
                     }
                 ),
                 ProjectItem(
                     id=2,
-                    title="Enterprise Data Archival & Cost Optimization",
-                    category="Program Management & Operations",
-                    description="Spearheaded comprehensive data archival and purging program to optimize storage costs and improve processing efficiency across healthcare SaaS platform.",
+                    title="Gen AI-Powered Product Delivery & Analytics Framework",
+                    category="Innovation & AI Implementation",
+                    description="Pioneered implementation of Generative AI-powered solutions across product delivery lifecycle, establishing advanced analytics modules and data-driven decision-making frameworks.",
                     achievements=[
-                        "30% reduction in storage costs",
-                        "20% improvement in processing efficiency",
-                        "Automated archival processes implementation",
-                        "Compliance-aligned data retention policies"
+                        "40% reduction in time-to-insight through analytics modules launch",
+                        "Advanced SQL-powered dashboards for executive decision making",
+                        "Gen AI integration for product lifecycle management",
+                        "Sustainable reporting frameworks using JIRA, Power BI, and SQL"
                     ],
-                    technologies=["Data Management", "Automated Processes", "SQL", "Storage Optimization", "Compliance"],
-                    impact="Delivered significant cost savings while maintaining data integrity and compliance requirements.",
+                    technologies=["Generative AI", "Advanced SQL", "Power BI", "JIRA", "Google Analytics", "Data Science"],
+                    impact="Revolutionary approach to product delivery optimization using cutting-edge AI technology and data science.",
                     metrics={
-                        "costReduction": "30%",
-                        "efficiency": "20%",
-                        "savings": "$2M+ annually"
+                        "timeToInsight": "40%",
+                        "decisionSpeed": "40%",
+                        "framework": "Comprehensive"
                     }
                 ),
                 ProjectItem(
                     id=3,
-                    title="Gen AI-Powered Product Delivery Framework",
-                    category="Innovation & AI Implementation",
-                    description="Pioneered implementation of Generative AI-powered frameworks to enhance requirement analysis, user feedback classification, and backlog management processes.",
+                    title="Enterprise Data Management & Operational Efficiency",
+                    category="Program Management & Operations",
+                    description="Spearheaded comprehensive data management initiatives including automated archival, purging programs, and operational efficiency improvements across healthcare SaaS platforms.",
                     achievements=[
-                        "25% reduction in backlog grooming time",
-                        "Accelerated feature prioritization process",
-                        "Enhanced requirement analysis accuracy",
-                        "Improved user feedback classification"
+                        "30% reduction in storage costs through automated archival and purging",
+                        "20% improvement in data processing efficiency",
+                        "30% improvement in on-time delivery through program roadmaps",
+                        "Enhanced delivery predictability by 25% with structured governance"
                     ],
-                    technologies=["Generative AI", "Machine Learning", "Natural Language Processing", "Process Automation", "Analytics"],
-                    impact="Revolutionary approach to product delivery optimization using cutting-edge AI technology.",
+                    technologies=["Data Management", "Automated Processes", "SQL", "Storage Optimization", "Program Governance"],
+                    impact="Delivered significant operational efficiency and cost savings while maintaining data integrity and compliance.",
                     metrics={
-                        "efficiency": "25%",
-                        "accuracy": "40%",
-                        "timeReduction": "10 hours/week"
+                        "costReduction": "30%",
+                        "efficiency": "20%",
+                        "deliveryImprovement": "30%"
                     }
                 ),
                 ProjectItem(
                     id=4,
-                    title="Healthcare OPPE Features & User Engagement",
+                    title="Healthcare SaaS Platform & Customer Adoption Growth",
                     category="Healthcare Product Development",
-                    description="Led development and implementation of high-quality OPPE (Ongoing Professional Practice Evaluation) features for healthcare providers, significantly enhancing user engagement.",
+                    description="Led comprehensive product initiatives for B2B healthcare SaaS platforms, focusing on user engagement mechanics, clinical workflow optimization, and customer adoption strategies.",
                     achievements=[
-                        "30% higher user engagement than expected",
-                        "Exceeded quality expectations for OPPE features",
-                        "Enhanced healthcare provider workflows",
-                        "Improved clinical decision support"
+                        "35% improvement in customer adoption through business-centric features",
+                        "30% improvement in user engagement through data-driven engagement mechanics",
+                        "25% improvement in feature adoption through user-centric design",
+                        "Enhanced clinical workflow automation reducing manual tasks"
                     ],
-                    technologies=["Healthcare Systems", "OPPE Standards", "Clinical Workflows", "User Experience", "Healthcare Analytics"],
-                    impact="Transformed healthcare provider evaluation processes with intuitive, high-quality features.",
+                    technologies=["Healthcare SaaS", "B2B Platforms", "Clinical Workflows", "User Experience", "Engagement Analytics"],
+                    impact="Transformed healthcare SaaS platform adoption and user engagement through strategic product initiatives.",
                     metrics={
+                        "adoption": "35%",
                         "engagement": "30%",
-                        "satisfaction": "95%",
-                        "adoption": "85%"
+                        "featureAdoption": "25%"
                     }
                 ),
                 ProjectItem(
                     id=5,
-                    title="Executive KPI Dashboards & Governance",
-                    category="Data Analytics & Governance",
-                    description="Established comprehensive JIRA + Power BI + SQL dashboard ecosystem to track KPIs, OKRs, and provide executive-level insights for strategic decision making.",
+                    title="Cross-Functional Team Leadership & Delivery Excellence",
+                    category="Leadership & Program Management",
+                    description="Established governance frameworks, built high-performing engineering teams, and implemented structured delivery processes to improve organizational efficiency and team performance.",
                     achievements=[
-                        "40% reduction in executive decision latency",
-                        "Enhanced roadmap visibility across organization",
-                        "Automated KPI tracking and reporting",
-                        "Improved program governance frameworks"
+                        "30% improvement in delivery efficiency through structured program planning",
+                        "40% improvement in cross-functional team productivity",
+                        "Built and mentored high-performing engineering teams",
+                        "Simplified complex delivery processes improving release governance"
                     ],
-                    technologies=["Power BI", "SQL Server", "JIRA", "Azure DevOps", "Executive Reporting", "KPI Analytics"],
-                    impact="Empowered executive leadership with real-time insights for faster, data-driven decisions.",
+                    technologies=["Agile Program Management", "Team Leadership", "JIRA", "Azure DevOps", "Governance Frameworks"],
+                    impact="Created scalable delivery excellence through team leadership and structured governance frameworks.",
                     metrics={
-                        "decisionSpeed": "40%",
-                        "visibility": "100%",
-                        "automation": "80%"
+                        "deliveryEfficiency": "30%",
+                        "productivity": "40%",
+                        "teamPerformance": "High"
                     }
                 )
             ],
