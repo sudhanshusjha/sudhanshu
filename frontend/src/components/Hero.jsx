@@ -72,12 +72,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           {/* Main Content */}
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-light text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-serif font-light text-gray-900 mb-6 leading-tight tracking-wide" style={{fontFamily: "'Playfair Display', serif"}}>
               {personal.name}
             </h1>
             
