@@ -94,17 +94,18 @@ class PortfolioService:
             experience=[
                 ExperienceItem(
                     id=1,
-                    title="Senior Technical Product Manager",
+                    title="Senior Technical Product Manager / Senior Technical Project Manager",
                     company="MIDAS IT Services Pvt. Ltd.",
                     location="New Delhi, India",
                     duration="Mar 2023 – Present",
                     type="Full-time",
                     highlights=[
-                        "Defined product strategy for EHR analytics & provider engagement platforms",
-                        "Led data archival & purging program reducing OPEX costs by 30%",
-                        "Applied Gen AI-powered backlog analysis for faster prioritization",
-                        "Mentored PMs/TPMs improving sprint predictability by 15-20%",
-                        "Built executive dashboards enhancing roadmap visibility"
+                        "Defined product strategy and executed roadmaps for EHR analytics and provider engagement solutions",
+                        "Built and owned end-to-end product lifecycles from ideation to launch with data-driven insights",
+                        "Leveraged SQL, Power BI, and Google Analytics to optimize product adoption, retention, and ROI",
+                        "Led cross-functional agile teams to deliver AI/GenAI-driven solutions and complex product initiatives",
+                        "Partnered with engineering, data science, design, and clinical stakeholders ensuring regulatory compliance (HIPAA)",
+                        "Built and monitored product KPIs resulting in 25% improvement in feature adoption"
                     ]
                 ),
                 ExperienceItem(
@@ -115,11 +116,12 @@ class PortfolioService:
                     duration="Mar 2020 – Feb 2023",
                     type="Full-time",
                     highlights=[
-                        "Owned SaaS delivery programs with Agile governance frameworks",
-                        "Reduced backlog items by 30% through agile ceremonies optimization",
-                        "Coordinated stakeholder alignment reducing development time by 25%",
-                        "Designed APIs & alerts reducing manual interventions by 25%",
-                        "Drove VOC-backed enhancements improving retention by 20%"
+                        "Owned multiple product areas within healthcare SaaS platforms, driving agile product delivery",
+                        "Defined clear product requirements and user stories, balancing user needs and business objectives",
+                        "Improved product-market fit resulting in measurable increase in customer satisfaction and retention",
+                        "Facilitated backlog grooming, sprint reviews, and agile ceremonies for team alignment",
+                        "Launched integrated APIs and real-time alerts, reducing manual tasks by 25%",
+                        "Built governance dashboards (JIRA + Power BI) increasing leadership visibility and decision speed"
                     ]
                 ),
                 ExperienceItem(
@@ -130,21 +132,33 @@ class PortfolioService:
                     duration="Jun 2016 – Feb 2020", 
                     type="Full-time",
                     highlights=[
-                        "Authored 100+ user stories improving sprint delivery by 15%",
-                        "Integrated EMR & EPR features boosting data accuracy by 20%",
-                        "Streamlined documentation cutting development time by 15%"
+                        "Managed full product lifecycle, delivering API-integrated solutions in healthcare and supply chain domains",
+                        "Improved cross-functional team productivity by 40% and launched high-impact SaaS features",
+                        "Led data-driven product enhancements using SQL and analytics for real-time user feedback prioritization"
                     ]
                 ),
                 ExperienceItem(
                     id=4,
                     title="Tech Lead",
-                    company="Incedo Inc. (formerly Indiabulls Tech Solutions)",
+                    company="Incedo Inc. (formerly Indiabulls Technology Solutions)",
                     location="Gurgaon, India",
                     duration="Jul 2013 – Jun 2016",
                     type="Full-time",
                     highlights=[
-                        "Directed SaaS CRM & workflow delivery achieving 20% data accuracy uplift",
-                        "Coordinated multi-tenant systems with compliance adherence"
+                        "Implemented TMS and CRM systems improving cross-functional productivity by 40%",
+                        "Executed supply chain automation for ADIDAS, boosting operational output by 20%"
+                    ]
+                ),
+                ExperienceItem(
+                    id=5,
+                    title="Senior Application Developer",
+                    company="Serco Global Services Pvt. Ltd. (Infovision Solutions Pvt. Ltd.)",
+                    location="Gurgaon, India",
+                    duration="Sep 2007 – Jun 2013",
+                    type="Full-time",
+                    highlights=[
+                        "Developed SFTP-based EDI apps, enhancing real-time data exchange accuracy by over 95%",
+                        "Designed multi-tier database architecture, increasing data retrieval efficiency by 40%"
                     ]
                 )
             ],
