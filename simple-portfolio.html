@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu Shekhar Jha - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #dbeafe 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; color: #1f2937; margin-bottom: 1rem; }
+        .hero h2 { font-size: clamp(1.2rem, 3vw, 1.8rem); color: #4b5563; margin-bottom: 1rem; }
+        .hero p { font-size: clamp(1rem, 2vw, 1.2rem); color: #6b7280; margin-bottom: 2rem; }
+        .stats { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
+        .stat { color: #4b5563; }
+        .stat-number { font-size: 2rem; font-weight: 700; color: #2563eb; }
+        .section { padding: 4rem 0; }
+        .section h2 { font-size: 3rem; font-weight: 300; text-align: center; margin-bottom: 3rem; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .profile-img { width: 300px; height: 300px; border-radius: 1rem; object-fit: cover; margin: 0 auto; display: block; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; background: #f9fafb; padding: 1.5rem; border-radius: 1rem; text-decoration: none; color: inherit; transition: transform 0.3s; }
+        .contact-item:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .contact-icon { width: 3rem; height: 3rem; background: #dbeafe; color: #2563eb; border-radius: 1rem; display: flex; align-items: center; justify-content: center; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .stats { gap: 1rem; } }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sudhanshu Shekhar Jha</h1>
+            <h2>Senior Technical Product & Program Leader | Gen AI Powered</h2>
+            <p>Strategic Vision • Cross-Functional Orchestration • Outcome-Driven Leadership</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">18+</span>
+                    <span>Years Experience</span>
+                </div>
+                <div class="stat">Healthcare • SaaS • Enterprise</div>
+                <div class="stat">Greater Noida West, India</div>
+            </div>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #6b7280;">
+                Available for <strong>Head/Director level roles</strong> in Technical Product Management and strategic consulting
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div>
+                    <img src="https://customer-assets.emergentagent.com/job_portfolio-pro-96/artifacts/9k9r7grb_WhatsApp%20Image%202025-09-10%20at%2019.48.04.jpeg" alt="Sudhanshu Shekhar Jha" class="profile-img">
+                </div>
+                <div>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #4b5563;">
+                        Accomplished Gen AI Powered Senior Technical Product & Program Leader with 18+ years in IT and 6+ years driving product management, agile delivery, and program governance across healthcare technology, SaaS, and enterprise ecosystems.
+                    </p>
+                    
+                    <h3 style="margin-bottom: 1rem; color: #1f2937;">Core Expertise</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem; color: #4b5563;">✓ Strategic product vision with program execution discipline</li>
+                        <li style="margin-bottom: 0.5rem; color: #4b5563;">✓ Gen AI powered solutions and advanced analytics expertise</li>
+                        <li style="margin-bottom: 0.5rem; color: #4b5563;">✓ End-to-end lifecycle management from strategy to sunset</li>
+                        <li style="margin-bottom: 0.5rem; color: #4b5563;">✓ C-level stakeholder communication and executive leadership</li>
+                        <li style="margin-bottom: 0.5rem; color: #4b5563;">✓ Healthcare technology and enterprise SaaS specialization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" style="background: #f9fafb;">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p style="text-align: center; color: #6b7280; max-width: 600px; margin: 0 auto 3rem auto;">
+                Open to discussing Head/Director level opportunities in Technical Product Management, Program Management, and strategic consulting.
+            </p>
+            
+            <div class="contact-grid">
+                <a href="mailto:sudhanshurg@gmail.com" class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>sudhanshurg@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a href="tel:+91-7303436488" class="contact-item">
+                    <div class="contact-icon" style="background: #d1fae5; color: #065f46;">📱</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91-7303436488</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/sudhanshu-s-jha/" target="_blank" class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>Connect on LinkedIn</p>
+                    </div>
+                </a>
+                
+                <div class="contact-item">
+                    <div class="contact-icon" style="background: #e9d5ff; color: #7c3aed;">📍</div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Greater Noida West, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #1f2937; color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <h3 style="margin-bottom: 1rem;">Sudhanshu Shekhar Jha</h3>
+            <p style="color: #d1d5db; margin-bottom: 1rem;">Senior Technical Product & Program Manager</p>
+            <p style="color: #9ca3af; font-size: 0.9rem;">&copy; 2024 Sudhanshu Shekhar Jha. Available for senior leadership roles.</p>
+        </div>
+    </footer>
+</body>
+</html>
