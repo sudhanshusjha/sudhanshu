@@ -1,60 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, Download, ExternalLink } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Button } from './ui/button';
-import ApiService from '../services/api';
+import { portfolioData } from '../data/portfolio';
 
 const Hero = () => {
-  const [portfolioData, setPortfolioData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchPortfolioData = async () => {
-      try {
-        setLoading(true);
-        const data = await ApiService.getPortfolio();
-        setPortfolioData(data);
-        // Log page view for analytics
-        ApiService.logPageView('hero');
-      } catch (err) {
-        setError(err.message);
-        console.error('Failed to load portfolio data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPortfolioData();
-  }, []);
-
-  if (loading) {
-    return (
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading portfolio...</p>
-        </div>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-        <div className="text-center">
-          <p className="text-red-600 mb-4">Error loading portfolio: {error}</p>
-          <Button onClick={() => window.location.reload()}>
-            Retry
-          </Button>
-        </div>
-      </section>
-    );
-  }
-
-  if (!portfolioData) {
-    return null;
-  }
-
   const { personal } = portfolioData;
 
   const scrollToContact = () => {

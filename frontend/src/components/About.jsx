@@ -1,43 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CheckCircle, Award, Users, TrendingUp } from 'lucide-react';
-import ApiService from '../services/api';
+import { portfolioData } from '../data/portfolio';
 
 const About = () => {
-  const [portfolioData, setPortfolioData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPortfolioData = async () => {
-      try {
-        const data = await ApiService.getPortfolio();
-        setPortfolioData(data);
-        // Log page view for analytics
-        ApiService.logPageView('about');
-      } catch (err) {
-        console.error('Failed to load portfolio data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPortfolioData();
-  }, []);
-
-  if (loading) {
-    return (
-      <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading about information...</p>
-        </div>
-      </section>
-    );
-  }
-
-  if (!portfolioData) {
-    return null;
-  }
-
   const { personal, about, certifications, achievements } = portfolioData;
 
   return (
