@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu Shekhar Jha - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #dbeafe 100%);
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            color: #1f2937;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero h2 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #4b5563;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            color: #4b5563;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: block;
+        }
+        
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1f2937;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 100%;
+            max-width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .about-content h3 {
+            color: #1f2937;
+            margin: 30px 0 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        .about-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .about-content li {
+            margin-bottom: 8px;
+            color: #4b5563;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .about-content li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .certs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .certs span {
+            background: #f3f4f6;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #374151;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .experience-section {
+            background: #f9fafb;
+            margin: 0;
+            padding: 80px 20px;
+            max-width: 100%;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 80px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 22px;
+            width: 16px;
+            height: 16px;
+            background: #2563eb;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #dbeafe;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .job-company {
+            font-size: 1.1rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .job-meta {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .job-highlights {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .job-highlights li {
+            margin-bottom: 8px;
+            color: #4b5563;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .job-highlights li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: white;
+            margin: 0;
+            padding: 80px 20px;
+            max-width: 100%;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-item {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        
+        .contact-item h3 {
+            color: #1f2937;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .contact-item p {
+            color: #6b7280;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .availability {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #c7d2fe;
+        }
+        
+        .availability h4 {
+            color: #1e40af;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            color: #1e40af;
+            font-weight: 500;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .footer p {
+            color: #d1d5db;
+            margin-bottom: 10px;
+        }
+        
+        .footer p:last-child {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { 
+                font-size: 2.5rem; 
+            }
+            .about-grid { 
+                grid-template-columns: 1fr; 
+                gap: 30px;
+            }
+            .stats { 
+                gap: 20px; 
+                font-size: 0.9rem;
+            }
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .status-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+            .timeline:before {
+                left: 15px;
+            }
+            .timeline-item {
+                padding-left: 50px;
+            }
+            .timeline-dot {
+                left: 7px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Sudhanshu Shekhar Jha</h1>
+            <h2>Senior Technical Product & Program Leader | Gen AI Powered</h2>
+            <p>Strategic Vision • Cross-Functional Orchestration • Outcome-Driven Leadership</p>
+            
+            <div class="stats">
+                <div>
+                    <div class="stat-number">18+</div>
+                    <div>Years Experience</div>
+                </div>
+                <div>Healthcare • SaaS • Enterprise</div>
+                <div>Greater Noida West, India</div>
+            </div>
+            
+            <p><strong>Available for Head/Director level roles</strong> in Technical Product Management and strategic consulting</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div>
+                <img src="https://customer-assets.emergentagent.com/job_portfolio-pro-96/artifacts/9k9r7grb_WhatsApp%20Image%202025-09-10%20at%2019.48.04.jpeg" alt="Sudhanshu Shekhar Jha" class="profile-img">
+            </div>
+            <div class="about-content">
+                <p>Accomplished Gen AI Powered Senior Technical Product & Program Leader with 18+ years in IT and 6+ years driving product management, agile delivery, and program governance across healthcare technology, SaaS, and enterprise ecosystems.</p>
+                
+                <h3>Core Expertise</h3>
+                <ul>
+                    <li>Strategic product vision with program execution discipline</li>
+                    <li>Gen AI powered solutions and advanced analytics expertise</li>
+                    <li>End-to-end lifecycle management from strategy to sunset</li>
+                    <li>C-level stakeholder communication and executive leadership</li>
+                    <li>Healthcare technology and enterprise SaaS specialization</li>
+                    <li>Director/Head of Product/Program positioned for leadership roles</li>
+                </ul>
+                
+                <h3>Professional Certifications</h3>
+                <div class="certs">
+                    <span>ISB Certified Product Manager</span>
+                    <span>PMP - Google Accredited</span>
+                    <span>PSPO - Scrum.org</span>
+                    <span>PSM - Scrum.org</span>
+                    <span>SPS - Scrum.org</span>
+                    <span>Google AI Essentials</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience-section">
+        <div class="section">
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-title">Senior Technical Product Manager / Senior Technical Project Manager</div>
+                        <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                        <div class="job-meta">📍 New Delhi, India • 📅 Mar 2023 – Present • Full-time</div>
+                        <ul class="job-highlights">
+                            <li>Defined product strategy and executed roadmaps for EHR analytics and provider engagement solutions</li>
+                            <li>Built and owned end-to-end product lifecycles from ideation to launch with data-driven insights</li>
+                            <li>Leveraged SQL, Power BI, and Google Analytics to optimize product adoption, retention, and ROI</li>
+                            <li>Led cross-functional agile teams to deliver AI/GenAI-driven solutions and complex product initiatives</li>
+                            <li>Built and monitored product KPIs resulting in 25% improvement in feature adoption</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-title">Technical Project Manager</div>
+                        <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                        <div class="job-meta">📍 New Delhi, India • 📅 Mar 2020 – Feb 2023 • Full-time</div>
+                        <ul class="job-highlights">
+                            <li>Owned multiple product areas within healthcare SaaS platforms, driving agile product delivery</li>
+                            <li>Defined clear product requirements and user stories, balancing user needs and business objectives</li>
+                            <li>Improved product-market fit resulting in measurable increase in customer satisfaction and retention</li>
+                            <li>Launched integrated APIs and real-time alerts, reducing manual tasks by 25%</li>
+                            <li>Built governance dashboards (JIRA + Power BI) increasing leadership visibility and decision speed</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-title">Project Lead</div>
+                        <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                        <div class="job-meta">📍 New Delhi, India • 📅 Jun 2016 – Feb 2020 • Full-time</div>
+                        <ul class="job-highlights">
+                            <li>Managed full product lifecycle, delivering API-integrated solutions in healthcare and supply chain domains</li>
+                            <li>Improved cross-functional team productivity by 40% and launched high-impact SaaS features</li>
+                            <li>Led data-driven product enhancements using SQL and analytics for real-time user feedback prioritization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="section">
+            <h2>Let's Connect</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; font-size: 1.1rem;">
+                Open to discussing Head/Director level opportunities in Technical Product Management, Program Management, and strategic consulting.
+            </p>
+            
+            <div class="contact-grid">
+                <a href="mailto:sudhanshurg@gmail.com" class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>sudhanshurg@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a href="tel:+91-7303436488" class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91-7303436488, +91-9650261122</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/sudhanshu-s-jha/" target="_blank" class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect on LinkedIn</p>
+                    </div>
+                </a>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Greater Noida West, India</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="availability">
+                <h4>Current Availability</h4>
+                <div class="status-grid">
+                    <div>🟢 Open to Head/Director level opportunities</div>
+                    <div>🟢 Available for strategic consulting projects</div>
+                    <div>🟢 Speaking & thought leadership opportunities</div>
+                </div>
+                <p style="margin-top: 20px; color: #1e40af; font-size: 0.9rem;">
+                    <strong>Response Time:</strong> Typically within 24 hours for professional inquiries
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h3>Sudhanshu Shekhar Jha</h3>
+        <p>Senior Technical Product & Program Manager specializing in healthcare SaaS and Gen AI solutions</p>
+        <p>&copy; 2024 Sudhanshu Shekhar Jha. Available for senior leadership roles.</p>
+    </div>
+</body>
+</html>
