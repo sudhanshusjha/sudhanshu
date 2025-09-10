@@ -27,14 +27,16 @@ class PortfolioService:
                 domain="IT & Tech Experience • Healthcare • SaaS • Enterprise"
             ),
             about=AboutInfo(
-                summary="Senior Technical Product & Program Manager with 18+ years of IT experience, combining deep technical expertise (.NET, SQL, APIs) with strategic product leadership. Specialized in end-to-end product lifecycle management, program governance, and delivery execution in regulated domains like US Healthcare and Enterprise SaaS.",
+                summary="Accomplished Gen AI Powered Senior Technical Product & Program Leader with 19+ years in IT and 6+ years driving product management, agile delivery, and program governance across healthcare technology, SaaS, and enterprise ecosystems. Adept at blending strategic product vision with program execution discipline, ensuring delivery of high-value, compliant, and customer-centric solutions.",
                 highlights=[
-                    "Technical depth with product strategy expertise",
-                    "Gen AI-powered solutions implementation",
-                    "Data-driven decision making and analytics",
-                    "Stakeholder management from C-level to operations",
-                    "Team mentoring and velocity improvements",
-                    "Healthcare and enterprise SaaS domain expertise"
+                    "Strategic product vision with program execution discipline",
+                    "Gen AI powered solutions and advanced analytics expertise",
+                    "End-to-end lifecycle management from strategy to sunset",
+                    "C-level stakeholder communication and executive leadership",
+                    "Healthcare technology and enterprise SaaS specialization",
+                    "Quantifiable business impact with data-driven decision making",
+                    "Cross-functional team leadership and matrix management",
+                    "Director/Head of Product/Program positioned for leadership roles"
                 ]
             ),
             skills=SkillsInfo(
