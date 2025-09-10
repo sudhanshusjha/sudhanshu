@@ -7,7 +7,9 @@ import { useToast } from '../hooks/use-toast';
 import ApiService from '../services/api';
 
 const Contact = () => {
-  const { personal } = mockData;
+  const [portfolioData, setPortfolioData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -16,6 +18,23 @@ const Contact = () => {
     message: ''
   });
 
+  useEffect(() => {
+    const fetchPortfolioData = async () => {
+      try {
+        const data = await ApiService.getPortfolio();
+        setPortfolioData(data);
+        // Log page view for analytics
+        ApiService.logPageView('contact');
+      } catch (err) {
+        console.error('Failed to load portfolio data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPortfolioData();
+  }, []);
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -23,20 +42,49 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your interest. I'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    });
+    setSubmitting(true);
+    
+    try {
+      const response = await ApiService.submitContactForm(formData);
+      
+      toast({
+        title: "Message Sent!",
+        description: response.message,
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+      
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive"
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
+
+  if (loading || !portfolioData) {
+    return (
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading contact information...</p>
+        </div>
+      </section>
+    );
+  }
+
+  const { personal } = portfolioData;
 
   const contactMethods = [
     {
