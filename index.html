@@ -67,7 +67,6 @@
             color: #4a5568;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
 
         .nav-links a:hover {
@@ -76,7 +75,7 @@
 
         .cta-button {
             background: #3182ce;
-            color: white;
+            color: white !important;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
             border-radius: 0.5rem;
@@ -104,7 +103,7 @@
             z-index: 2;
             max-width: 900px;
             margin: 0 auto;
-            padding: 6rem 2rem 4rem;
+            padding: 8rem 2rem 6rem;
         }
 
         .hero h1 {
@@ -112,7 +111,7 @@
             font-size: 4rem;
             font-weight: 600;
             color: #2d3748;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
             letter-spacing: -1px;
         }
@@ -120,7 +119,7 @@
         .hero-subtitle {
             font-size: 1.3rem;
             color: #4a5568;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 500;
         }
 
@@ -133,10 +132,10 @@
 
         .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
             margin: 3rem 0;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -155,7 +154,7 @@
         }
 
         .stat-label {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #4a5568;
             font-weight: 500;
         }
@@ -164,7 +163,7 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            margin-top: 3rem;
+            margin: 3rem 0;
         }
 
         .btn-primary {
@@ -199,18 +198,18 @@
         }
 
         .availability-section {
-            margin-top: 4rem;
+            margin-top: 2rem;
             padding: 2rem;
             text-align: center;
             font-size: 1rem;
             color: #4a5568;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 1rem;
             backdrop-filter: blur(10px);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         /* About Section */
@@ -224,7 +223,7 @@
             font-size: 2.5rem;
             color: #2d3748;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .about-content {
@@ -232,7 +231,6 @@
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
             align-items: start;
-            margin-bottom: 4rem;
         }
 
         .about-left {
@@ -246,9 +244,15 @@
 
         .about-image img {
             width: 100%;
-            max-width: 350px;
+            max-width: 300px;
             border-radius: 1rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .stats-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .experience-card {
@@ -256,7 +260,7 @@
             padding: 1.5rem;
             border-radius: 1rem;
             text-align: center;
-            margin-bottom: 1rem;
+            border: 2px solid #e2e8f0;
         }
 
         .experience-number {
@@ -276,6 +280,7 @@
             padding: 1.5rem;
             border-radius: 1rem;
             text-align: center;
+            border: 2px solid #4fd1c7;
         }
 
         .cert-number {
@@ -290,15 +295,12 @@
             margin-top: 0.5rem;
         }
 
-        .about-text {
-            padding-left: 2rem;
-        }
-
         .about-text p {
             font-size: 1.1rem;
             color: #4a5568;
             margin-bottom: 2rem;
             line-height: 1.8;
+            text-align: justify;
         }
 
         .core-expertise {
@@ -306,7 +308,7 @@
         }
 
         .core-expertise h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #2d3748;
             margin-bottom: 1.5rem;
         }
@@ -318,10 +320,11 @@
 
         .expertise-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.75rem;
             font-size: 1rem;
             color: #4a5568;
+            line-height: 1.6;
         }
 
         .expertise-item::before {
@@ -329,6 +332,7 @@
             color: #38a169;
             font-weight: bold;
             font-size: 1.2rem;
+            margin-top: 2px;
         }
 
         .certifications-section {
@@ -336,19 +340,15 @@
         }
 
         .certifications-section h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #2d3748;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .cert-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin-bottom: 2rem;
         }
 
         .cert-item {
@@ -357,59 +357,12 @@
             border-radius: 0.5rem;
             font-size: 0.9rem;
             color: #4a5568;
+            border: 1px solid #e2e8f0;
         }
 
         .cert-title {
             font-weight: 600;
             color: #2d3748;
-        }
-
-        .achievements {
-            background: #f8fafc;
-            padding: 3rem 0;
-            margin: 3rem 0;
-            border-radius: 1rem;
-        }
-
-        .achievements h3 {
-            font-size: 1.5rem;
-            color: #2d3748;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .achievement-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .achievement-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .achievement-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #3182ce;
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement-label {
-            color: #4a5568;
-            font-size: 0.95rem;
-            font-weight: 500;
         }
 
         /* Skills Section */
@@ -431,53 +384,10 @@
             color: #4a5568;
             font-size: 1.1rem;
             margin-bottom: 4rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            color: #2d3748;
-            margin-bottom: 1rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.5rem 0;
-            color: #4a5568;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skill-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3182ce;
-            font-weight: bold;
+            line-height: 1.7;
         }
 
         /* Recognition Section */
@@ -539,6 +449,13 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 3rem;
         }
 
         .contact-info {
@@ -659,7 +576,7 @@
             }
 
             .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 1rem;
             }
 
@@ -673,15 +590,7 @@
                 text-align: center;
             }
 
-            .about-text {
-                padding-left: 0;
-            }
-
             .cert-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .achievement-cards {
                 grid-template-columns: 1fr;
             }
 
@@ -693,20 +602,6 @@
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
@@ -730,13 +625,13 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="fade-in-up">Sudhanshu Shekhar Jha</h1>
-            <p class="hero-subtitle fade-in-up">Senior Technical Product & Program Leader | Gen AI Powered</p>
-            <p class="hero-description fade-in-up">
+            <h1>Sudhanshu Shekhar Jha</h1>
+            <p class="hero-subtitle">Senior Technical Product & Program Leader | Gen AI Powered</p>
+            <p class="hero-description">
                 Strategic Vision • Cross-Functional Orchestration • Outcome-Driven Leadership
             </p>
             
-            <div class="hero-stats fade-in-up">
+            <div class="hero-stats">
                 <div class="stat-card">
                     <span class="stat-number">18+</span>
                     <span class="stat-label">Years Experience</span>
@@ -749,12 +644,12 @@
                 </div>
             </div>
 
-            <div class="hero-buttons fade-in-up">
+            <div class="hero-buttons">
                 <a href="#projects" class="btn-primary">View My Work →</a>
                 <a href="#contact" class="btn-secondary">Get In Touch</a>
             </div>
 
-            <div class="availability-section fade-in-up">
+            <div class="availability-section">
                 Available for <strong>Head/Director level roles</strong> in Technical Product Management, Program Management, and strategic consulting opportunities with enterprise SaaS and healthcare technology companies.
             </div>
         </div>
@@ -769,13 +664,15 @@
                     <div class="about-image">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Sudhanshu Shekhar Jha" />
                     </div>
-                    <div class="experience-card">
-                        <div class="experience-number">18+</div>
-                        <div class="experience-label">Years Experience</div>
-                    </div>
-                    <div class="certifications-card">
-                        <div class="cert-number">6+</div>
-                        <div class="cert-label">Certifications</div>
+                    <div class="stats-cards">
+                        <div class="experience-card">
+                            <div class="experience-number">18+</div>
+                            <div class="experience-label">Years Experience</div>
+                        </div>
+                        <div class="certifications-card">
+                            <div class="cert-number">6+</div>
+                            <div class="cert-label">Certifications</div>
+                        </div>
                     </div>
                 </div>
                 <div class="about-text">
@@ -816,20 +713,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="achievements">
-                <h3>Recognition & Awards</h3>
-                <div class="achievement-cards">
-                    <div class="achievement-card">
-                        <div class="achievement-number">30%</div>
-                        <div class="achievement-label">Cost Reduction Data Optimization</div>
-                    </div>
-                    <div class="achievement-card">
-                        <div class="achievement-number">30%</div>
-                        <div class="achievement-label">Engagement Provider Platform</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -840,56 +723,6 @@
             <p class="skills-subtitle">
                 A comprehensive blend of technical depth, product strategy, and leadership capabilities honed over 18+ years in enterprise SaaS and healthcare technology domains.
             </p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🎯 Product Strategy & Management</h3>
-                    <ul class="skill-list">
-                        <li>Product Roadmap & Strategy</li>
-                        <li>Market Research & Analysis</li>
-                        <li>User Experience Design</li>
-                        <li>Feature Prioritization</li>
-                        <li>Go-to-Market Strategy</li>
-                        <li>Product Analytics & Metrics</li>
-                        <li>Customer Journey Optimization</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>⚡ Technical Leadership</h3>
-                    <ul class="skill-list">
-                        <li>System Architecture & Design</li>
-                        <li>API Design & Integration</li>
-                        <li>Cloud Platforms (AWS, Azure, GCP)</li>
-                        <li>Healthcare Technology Stack</li>
-                        <li>SaaS Platform Development</li>
-                        <li>Data Analytics & BI</li>
-                        <li>Security & Compliance (HIPAA)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>🚀 Program & Project Management</h3>
-                    <ul class="skill-list">
-                        <li>Agile & Scrum Methodologies</li>
-                        <li>Cross-functional Team Leadership</li>
-                        <li>Stakeholder Management</li>
-                        <li>Risk Assessment & Mitigation</li>
-                        <li>Budget & Resource Planning</li>
-                        <li>Performance Optimization</li>
-                        <li>Change Management</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>🤖 AI & Emerging Technologies</h3>
-                    <ul class="skill-list">
-                        <li>Gen AI & Machine Learning</li>
-                        <li>Advanced Analytics & Data Science</li>
-                        <li>Automation & Process Optimization</li>
-                        <li>Digital Transformation</li>
-                        <li>Healthcare AI Applications</li>
-                        <li>Predictive Analytics</li>
-                        <li>Intelligent Automation</li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -913,58 +746,6 @@
                 <div class="recognition-item">
                     <div class="recognition-title">Director/Head Level Leadership Position</div>
                     <div class="recognition-description">Positioned for Director/Head of Product/Head of Program leadership roles based on strategic vision and execution excellence</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="skills">
-        <div class="container">
-            <h2>Featured Achievements</h2>
-            <p class="skills-subtitle">
-                Demonstrating measurable impact across healthcare technology and enterprise SaaS domains with focus on innovation and strategic outcomes.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🏥 Healthcare Technology Leadership</h3>
-                    <ul class="skill-list">
-                        <li>Led 30% cost reduction through data optimization</li>
-                        <li>Achieved 30% engagement increase in provider platforms</li>
-                        <li>Implemented HIPAA-compliant solution architectures</li>
-                        <li>Managed cross-functional teams of 50+ members</li>
-                        <li>Delivered error-free data transfers (Philips recognition)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>💼 Enterprise SaaS Excellence</h3>
-                    <ul class="skill-list">
-                        <li>End-to-end lifecycle management expertise</li>
-                        <li>Strategic product vision with execution discipline</li>
-                        <li>C-level stakeholder communication excellence</li>
-                        <li>Program governance and delivery optimization</li>
-                        <li>Customer-centric solution development</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>🎯 Strategic Leadership Impact</h3>
-                    <ul class="skill-list">
-                        <li>Gen AI powered solution implementation</li>
-                        <li>Advanced analytics and business intelligence</li>
-                        <li>Matrix management and team leadership</li>
-                        <li>Quantifiable business impact delivery</li>
-                        <li>Director/Head level positioned for growth</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>📝 Thought Leadership</h3>
-                    <ul class="skill-list">
-                        <li>Tech PMx Junction Newsletter Author</li>
-                        <li>Real-world product management insights</li>
-                        <li>Strategic vision and execution best practices</li>
-                        <li>Industry recognition and awards</li>
-                        <li>Professional certification excellence</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -1008,7 +789,7 @@
                     <a href="#about">Product Management</a>
                     <a href="#skills">Program Leadership</a>
                     <a href="#experience">Strategic Consulting</a>
-                    <a href="#projects">Technical Leadership</a>
+                    <a href="#contact">Technical Leadership</a>
                 </div>
                 <div class="footer-section">
                     <h3>Connect</h3>
@@ -1059,42 +840,13 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
         });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for animations
-        document.querySelectorAll('section > .container > *, .hero-content > *').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Initialize on page load
-        window.addEventListener('load', function() {
-            // Add fade-in effect to initial elements
-            setTimeout(() => {
-                document.querySelectorAll('.fade-in-up').forEach(el => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                });
-            }, 100);
-        });
     </script>
 </body>
 </html>
+Agent is waiting...
