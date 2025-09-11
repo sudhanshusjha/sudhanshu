@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu Shekhar Jha - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        /* Header Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .logo:hover {
+            color: #2563eb;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+            transform: translateY(-1px);
+        }
+        
+        .nav-cta {
+            background: #2563eb;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+        
+        /* Mobile menu toggle */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #dbeafe 100%);
+            padding: 120px 20px 80px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 300;
+            color: #1f2937;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .hero h2 {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            color: #4b5563;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        
+        .hero-tagline {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #6b7280;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin: 48px 0;
+            flex-wrap: wrap;
+            color: #4b5563;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+        
+        .stat-divider {
+            width: 1px;
+            height: 24px;
+            background: #d1d5db;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 48px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #1f2937;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary:hover {
+            background: #374151;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #4b5563;
+            padding: 12px 32px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #f9fafb;
+            transform: scale(1.05);
+        }
+        
+        .hero-note {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid #d1d5db;
+        }
+        
+        .hero-note p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            max-width: 768px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+            text-align: center;
+            max-width: 768px;
+            margin: 0 auto 64px auto;
+            line-height: 1.6;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .profile-container {
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .floating-stat {
+            position: absolute;
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .floating-stat-1 {
+            top: 32px;
+            right: -16px;
+        }
+        
+        .floating-stat-2 {
+            bottom: 32px;
+            left: -16px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-align: center;
+        }
+        
+        .achievement-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            width: 100%;
+            max-width: 320px;
+        }
+        
+        .achievement-card {
+            background: #dbeafe;
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .achievement-card.green {
+            background: #d1fae5;
+        }
+        
+        .achievement-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 4px;
+        }
+        
+        .achievement-card.green .achievement-title {
+            color: #065f46;
+        }
+        
+        .achievement-desc {
+            font-size: 0.75rem;
+            color: #1e40af;
+        }
+        
+        .achievement-card.green .achievement-desc {
+            color: #065f46;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .about-text {
+            font-size: 1.125rem;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .highlights-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .highlights-list {
+            display: grid;
+            gap: 12px;
+            list-style: none;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #10b981;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .cert-badge {
+            background: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: #374151;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .awards-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .award-item {
+            border-left: 4px solid #2563eb;
+            padding-left: 16px;
+        }
+        
+        .award-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .award-desc {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        /* Skills Section */
+        .skills {
+            background: #f9fafb;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .skill-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Experience Section */
+        .experience {
+            background: white;
+        }
+        
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding-left: 80px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 24px;
+            width: 16px;
+            height: 16px;
+            background: #2563eb;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #dbeafe;
+        }
+        
+        .experience-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .job-company {
+            font-size: 1.125rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+            font-size: 0.875rem;
+        }
+        
+        .job-highlights {
+            list-style: none;
+        }
+        
+        .job-highlights h4 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .job-highlights ul {
+            display: grid;
+            gap: 12px;
+            list-style: none;
+        }
+        
+        .highlight-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .arrow-icon {
+            color: #2563eb;
+            font-weight: 600;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        /* Projects Section */
+        .projects {
+            background: #f9fafb;
+        }
+        
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 48px;
+        }
+        
+        .filter-btn {
+            background: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .filter-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        .filter-btn:hover {
+            background: #f3f4f6;
+        }
+        
+        .filter-btn.active:hover {
+            background: #1d4ed8;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 32px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-header {
+            padding: 32px 32px 24px 32px;
+        }
+        
+        .project-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .project-icon {
+            padding: 12px;
+            background: #dbeafe;
+            border-radius: 8px;
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .project-category {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .project-desc {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .project-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .metric-item {
+            text-align: center;
+            background: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        
+        .metric-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+        
+        .metric-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+        
+        .project-content {
+            padding: 0 32px 32px 32px;
+        }
+        
+        .achievements-section h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+        
+        .achievements-list {
+            display: grid;
+            gap: 8px;
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        
+        .achievement-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .bullet {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+        
+        .achievement-text {
+            font-size: 0.875rem;
+            color: #374151;
+        }
+        
+        .tech-section h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .tech-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .impact-statement {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            padding: 16px;
+            border-radius: 8px;
+        }
+        
+        .impact-statement h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .impact-text {
+            font-size: 0.875rem;
+            color: #374151;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            background: #f9fafb;
+            padding: 24px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .contact-item:hover {
+            background: #f3f4f6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #dbeafe;
+            color: #2563eb;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-info h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .contact-info p {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .availability-card {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #c7d2fe;
+            margin-bottom: 48px;
+        }
+        
+        .availability-title {
+            color: #1e40af;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            color: #1e40af;
+            font-weight: 500;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 48px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-text {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .footer-meta {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .newsletter-card {
+            background: #374151;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+        
+        .newsletter-title {
+            font-weight: 500;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .newsletter-desc {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 32px;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .footer-nav-link {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav-link:hover {
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-button {
+                display: block;
+            }
+            
+            .hero {
+                padding: 100px 20px 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                gap: 16px;
+                font-size: 0.875rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+            
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline:before {
+                left: 16px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-dot {
+                left: 8px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                font-size: 0.875rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animation on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Sudhanshu Jha</a>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-cta">Get In Touch</a>
+            </nav>
+            <button class="mobile-menu-button">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Sudhanshu Shekhar Jha</h1>
+            <h2>Senior Technical Product & Program Leader | Gen AI Powered</h2>
+            <p class="hero-tagline">Strategic Vision • Cross-Functional Orchestration • Outcome-Driven Leadership</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">18+</span>
+                    <span>Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div>IT & Tech Experience • Healthcare • SaaS • Enterprise</div>
+                <div class="stat-divider"></div>
+                <div>Greater Noida West, India</div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">
+                    View My Work
+                    <span>→</span>
+                </a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+            
+            <div class="hero-note">
+                <p>Available for <strong>Head/Director level roles</strong> in Technical Product Management, Program Management, and strategic consulting opportunities with enterprise SaaS and healthcare technology companies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about fade-in">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="profile-section">
+                    <div class="profile-container">
+                        <img src="https://customer-assets.emergentagent.com/job_portfolio-pro-96/artifacts/9k9r7grb_WhatsApp%20Image%202025-09-10%20at%2019.48.04.jpeg" alt="Sudhanshu Shekhar Jha - Professional Profile" class="profile-img">
+                        
+                        <div class="floating-stat floating-stat-1">
+                            <div class="stat-value">18+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        
+                        <div class="floating-stat floating-stat-2">
+                            <div class="stat-value">6+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-cards">
+                        <div class="achievement-card">
+                            <div class="achievement-title">30% Cost Reduction</div>
+                            <div class="achievement-desc">Data Optimization</div>
+                        </div>
+                        <div class="achievement-card green">
+                            <div class="achievement-title">30% Engagement</div>
+                            <div class="achievement-desc">Provider Platform</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">About Me</h2>
+                        <p class="about-text">Accomplished Gen AI Powered Senior Technical Product & Program Leader with 18+ years in IT and 6+ years driving product management, agile delivery, and program governance across healthcare technology, SaaS, and enterprise ecosystems. Adept at blending strategic product vision with program execution discipline, ensuring delivery of high-value, compliant, and customer-centric solutions.</p>
+                    </div>
+                    
+                    <div class="highlights-section">
+                        <h3>Core Expertise</h3>
+                        <ul class="highlights-list">
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Strategic product vision with program execution discipline</span>
+                            </li>
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Gen AI powered solutions and advanced analytics expertise</span>
+                            </li>
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>End-to-end lifecycle management from strategy to sunset</span>
+                            </li>
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>C-level stakeholder communication and executive leadership</span>
+                            </li>
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Healthcare technology and enterprise SaaS specialization</span>
+                            </li>
+                            <li class="highlight-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Director/Head of Product/Program positioned for leadership roles</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="certifications-section">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                            <svg style="width: 20px; height: 20px; color: #2563eb;" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <h3>Professional Certifications</h3>
+                        </div>
+                        <div class="certifications-grid">
+                            <div class="cert-badge">ISB Certified Product Manager</div>
+                            <div class="cert-badge">Project Management Professional (PMP)</div>
+                            <div class="cert-badge">Professional Scrum Product Owner (PSPO)</div>
+                            <div class="cert-badge">Professional Scrum Master (PSM)</div>
+                            <div class="cert-badge">Scaled Professional Scrum (SPS)</div>
+                            <div class="cert-badge">Google Certified AI Professional</div>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-section">
+                        <h3>Recognition & Awards</h3>
+                        <div class="award-item">
+                            <h4 class="award-title">Philips Client Recognition</h4>
+                            <p class="award-desc">Awarded by client (Philips) for error-free data transfer within timelines</p>
+                        </div>
+                        <div class="award-item">
+                            <h4 class="award-title">Serco Pulse Award - Best Employee</h4>
+                            <p class="award-desc">Honored 'Serco Pulse Award – Best Employee (India) of the year' by Serco Global Services</p>
+                        </div>
+                        <div class="award-item">
+                            <h4 class="award-title">Tech PMx Junction Newsletter Author</h4>
+                            <p class="award-desc">Author of Tech PMx Junction newsletter dedicated to real-world lessons in product, project, and program management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills fade-in">
+        <div class="section-container">
+            <h2 class="section-title">Core Skills & Expertise</h2>
+            <p class="section-subtitle">A comprehensive blend of technical depth, product strategy, and leadership capabilities honed over 18+ years in enterprise SaaS and healthcare technology domains.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎯</div>
+                        <div>
+                            <h3 class="skill-title">Product Management & Strategy</h3>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Product Vision & Roadmapping</span>
+                        <span class="skill-tag">Product Strategy & Execution</span>
+                        <span class="skill-tag">Product Lifecycle Management</span>
+                        <span class="skill-tag">Feature Prioritization</span>
+                        <span class="skill-tag">Customer Discovery & VOC</span>
+                        <span class="skill-tag">Data-Driven Prioritization</span>
+                        <span class="skill-tag">Continuous Improvement</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: #d1fae5; color: #065f46;">⚙️</div>
+                        <div>
+                            <h3 class="skill-title">Program & Delivery Management</h3>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Technical Program Management</span>
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Program Governance</span>
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Portfolio Oversight</span>
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Agile Program Delivery</span>
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Risk & Dependency Tracking</span>
+                        <span class="skill-tag" style="background: #d1fae5; color: #065f46;">Benefits Realization</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: #e9d5ff; color: #7c3aed;">📊</div>
+                        <div>
+                            <h3 class="skill-title">Data Analytics & Gen AI</h3>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">Gen AI & Advanced SQL</span>
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">Power BI, SSRS, SSIS</span>
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">KPI Dashboards</span>
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">EHR/EMR Integrations</span>
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">Data Archival Programs</span>
+                        <span class="skill-tag" style="background: #e9d5ff; color: #7c3aed;">Metrics Definition</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: #fed7aa; color: #ea580c;">👥</div>
+                        <div>
+                            <h3 class="skill-title">Leadership & Communication</h3>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">C-Level Communication</span>
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">Cross-Functional Collaboration</span>
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">Matrix Leadership</span>
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">Executive Storytelling</span>
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">Team Enablement</span>
+                        <span class="skill-tag" style="background: #fed7aa; color: #ea580c;">Change Management</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: #f3f4f6; color: #4b5563;">💻</div>
+                        <div>
+                            <h3 class="skill-title">Technology & Tools</h3>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">CRM & TMS Platforms</span>
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">API Integrations</span>
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">JIRA & Azure DevOps</span>
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">Agile Ceremonies</span>
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">HIPAA Compliance</span>
+                        <span class="skill-tag" style="background: #f3f4f6; color: #4b5563;">Flow Metrics</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain Focus Areas -->
+            <div style="margin-top: 64px; background: white; padding: 32px; border-radius: 16px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border: 1px solid #e5e7eb;">
+                <h3 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin-bottom: 24px; text-align: center;">Domain Expertise & Focus Areas</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
+                    <div style="text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                            <span style="font-size: 2rem;">🏥</span>
+                        </div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 8px;">Healthcare SaaS</h4>
+                        <p style="color: #6b7280; font-size: 0.875rem;">EHR analytics, HIPAA compliance, HL7/FHIR integration, clinical workflows</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                            <span style="font-size: 2rem;">📈</span>
+                        </div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 8px;">Enterprise Data</h4>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Data architecture, analytics platforms, Gen AI implementation, cost optimization</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 64px; height: 64px; background: #e9d5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                            <span style="font-size: 2rem;">🚀</span>
+                        </div>
+                        <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 8px;">Program Leadership</h4>
+                        <p style="color: #6b7280; font-size: 0.875rem;">Multi-team coordination, stakeholder management, delivery optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience fade-in">
+        <div class="section-container">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">18+ years of progressive growth from technical development to senior product and program leadership roles, consistently delivering measurable business impact across healthcare and enterprise SaaS domains.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div style="margin-bottom: 24px;">
+                            <h3 class="job-title">Senior Technical Product Manager / Senior Technical Project Manager</h3>
+                            <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                            <div class="job-meta">
+                                <span>📍 New Delhi, India</span>
+                                <span>📅 Mar 2023 – Present</span>
+                                <span style="background: #f3f4f6; padding: 4px 8px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="job-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Defined product strategy and executed roadmaps for EHR analytics and provider engagement solutions</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Built and owned end-to-end product lifecycles from ideation to launch with data-driven insights</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Leveraged SQL, Power BI, and Google Analytics to optimize product adoption, retention, and ROI</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Led cross-functional agile teams to deliver AI/GenAI-driven solutions and complex product initiatives</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Built and monitored product KPIs resulting in 25% improvement in feature adoption</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div style="margin-bottom: 24px;">
+                            <h3 class="job-title">Technical Project Manager</h3>
+                            <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                            <div class="job-meta">
+                                <span>📍 New Delhi, India</span>
+                                <span>📅 Mar 2020 – Feb 2023</span>
+                                <span style="background: #f3f4f6; padding: 4px 8px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="job-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Owned multiple product areas within healthcare SaaS platforms, driving agile product delivery</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Defined clear product requirements and user stories, balancing user needs and business objectives</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Improved product-market fit resulting in measurable increase in customer satisfaction and retention</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Launched integrated APIs and real-time alerts, reducing manual tasks by 25%</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Built governance dashboards (JIRA + Power BI) increasing leadership visibility and decision speed</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div style="margin-bottom: 24px;">
+                            <h3 class="job-title">Project Lead</h3>
+                            <div class="job-company">MIDAS IT Services Pvt. Ltd.</div>
+                            <div class="job-meta">
+                                <span>📍 New Delhi, India</span>
+                                <span>📅 Jun 2016 – Feb 2020</span>
+                                <span style="background: #f3f4f6; padding: 4px 8px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="job-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Managed full product lifecycle, delivering API-integrated solutions in healthcare and supply chain domains</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Improved cross-functional team productivity by 40% and launched high-impact SaaS features</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Led data-driven product enhancements using SQL and analytics for real-time user feedback prioritization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div style="margin-bottom: 24px;">
+                            <h3 class="job-title">Tech Lead</h3>
+                            <div class="job-company">Incedo Inc. (formerly Indiabulls Technology Solutions)</div>
+                            <div class="job-meta">
+                                <span>📍 Gurgaon, India</span>
+                                <span>📅 Jul 2013 – Jun 2016</span>
+                                <span style="background: #f3f4f6; padding: 4px 8px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="job-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Implemented TMS and CRM systems improving cross-functional productivity by 40%</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Executed supply chain automation for ADIDAS, boosting operational output by 20%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card">
+                        <div style="margin-bottom: 24px;">
+                            <h3 class="job-title">Senior Application Developer</h3>
+                            <div class="job-company">Serco Global Services Pvt. Ltd.</div>
+                            <div class="job-meta">
+                                <span>📍 Gurgaon, India</span>
+                                <span>📅 Sep 2007 – Jun 2013</span>
+                                <span style="background: #f3f4f6; padding: 4px 8px; border-radius: 16px; font-size: 0.75rem; font-weight: 500;">Full-time</span>
+                            </div>
+                        </div>
+                        <div class="job-highlights">
+                            <h4>Key Achievements</h4>
+                            <ul>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Developed SFTP-based EDI apps, enhancing real-time data exchange accuracy by over 95%</span>
+                                </li>
+                                <li class="highlight-point">
+                                    <span class="arrow-icon">→</span>
+                                    <span>Designed multi-tier database architecture, increasing data retrieval efficiency by 40%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Career Progression Summary -->
+            <div style="margin-top: 64px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 32px; border-radius: 16px;">
+                <h3 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin-bottom: 24px; text-align: center;">Career Progression & Impact</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #2563eb; margin-bottom: 8px;">18+</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Years in Technology</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">From Developer to Senior Leader</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #10b981; margin-bottom: 8px;">9+</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Years in Product/Program</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">Leadership & Strategy Focus</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #8b5cf6; margin-bottom: 8px;">5+</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Healthcare SaaS Focus</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">Specialized Domain Expertise</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects fade-in">
+        <div class="section-container">
+            <h2 class="section-title">Key Projects & Achievements</h2>
+            <p class="section-subtitle">Transformative initiatives that demonstrate strategic thinking, technical expertise, and measurable business impact across healthcare SaaS and enterprise platforms.</p>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active">All Projects</button>
+                <button class="filter-btn">Product Strategy</button>
+                <button class="filter-btn">AI Implementation</button>
+                <button class="filter-btn">Healthcare</button>
+                <button class="filter-btn">Program Management</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-top">
+                            <div class="project-icon">📊</div>
+                            <div style="flex: 1;">
+                                <h3 class="project-title">EHR Analytics & Provider Engagement Platform Evolution</h3>
+                                <span class="project-category">Product Strategy & Analytics</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">Led strategic product evolution for Electronic Health Record analytics platform, focusing on provider engagement solutions with comprehensive data visualization and dashboard capabilities.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Engagement</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">20%</div>
+                                <div class="metric-label">Satisfaction</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">18 mo</div>
+                                <div class="metric-label">Timeline</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="achievements-section">
+                            <h4>Key Achievements</h4>
+                            <ul class="achievements-list">
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">30% increase in provider engagement through strategic product initiatives</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">20% improvement in client satisfaction by aligning features with business needs</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">Enhanced data visualization and dashboarding solutions</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tech-section">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Healthcare Analytics</span>
+                                <span class="tech-tag">EHR Integration</span>
+                                <span class="tech-tag">HL7/FHIR</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                        </div>
+                        <div class="impact-statement">
+                            <h4>Business Impact</h4>
+                            <p class="impact-text">"Transformed healthcare provider experience through strategic product vision and improved engagement strategies."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-top">
+                            <div class="project-icon">🧠</div>
+                            <div style="flex: 1;">
+                                <h3 class="project-title">Gen AI-Powered Product Delivery & Analytics Framework</h3>
+                                <span class="project-category">Innovation & AI Implementation</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">Pioneered implementation of Generative AI-powered solutions across product delivery lifecycle, establishing advanced analytics modules and data-driven decision-making frameworks.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Time Insight</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">40%</div>
+                                <div class="metric-label">Decision</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">Full</div>
+                                <div class="metric-label">Framework</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="achievements-section">
+                            <h4>Key Achievements</h4>
+                            <ul class="achievements-list">
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">40% reduction in time-to-insight through analytics modules launch</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">Advanced SQL-powered dashboards for executive decision making</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">Gen AI integration for product lifecycle management</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tech-section">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Generative AI</span>
+                                <span class="tech-tag">Advanced SQL</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">JIRA</span>
+                                <span class="tech-tag">Google Analytics</span>
+                                <span class="tech-tag">Data Science</span>
+                            </div>
+                        </div>
+                        <div class="impact-statement">
+                            <h4>Business Impact</h4>
+                            <p class="impact-text">"Revolutionary approach to product delivery optimization using cutting-edge AI technology and data science."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-top">
+                            <div class="project-icon">⚡</div>
+                            <div style="flex: 1;">
+                                <h3 class="project-title">Enterprise Data Management & Operational Efficiency</h3>
+                                <span class="project-category">Program Management & Operations</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">Spearheaded comprehensive data management initiatives including automated archival, purging programs, and operational efficiency improvements across healthcare SaaS platforms.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Cost Reduction</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">20%</div>
+                                <div class="metric-label">Efficiency</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Delivery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="achievements-section">
+                            <h4>Key Achievements</h4>
+                            <ul class="achievements-list">
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">30% reduction in storage costs through automated archival and purging</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">20% improvement in data processing efficiency</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">Enhanced delivery predictability by 25% with structured governance</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tech-section">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Data Management</span>
+                                <span class="tech-tag">Automated Processes</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Storage Optimization</span>
+                                <span class="tech-tag">Program Governance</span>
+                            </div>
+                        </div>
+                        <div class="impact-statement">
+                            <h4>Business Impact</h4>
+                            <p class="impact-text">"Delivered significant operational efficiency and cost savings while maintaining data integrity and compliance."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-top">
+                            <div class="project-icon">🏥</div>
+                            <div style="flex: 1;">
+                                <h3 class="project-title">Healthcare SaaS Platform & Customer Adoption Growth</h3>
+                                <span class="project-category">Healthcare Product Development</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">Led comprehensive product initiatives for B2B healthcare SaaS platforms, focusing on user engagement mechanics, clinical workflow optimization, and customer adoption strategies.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">35%</div>
+                                <div class="metric-label">Adoption</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Engagement</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">25%</div>
+                                <div class="metric-label">Features</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="achievements-section">
+                            <h4>Key Achievements</h4>
+                            <ul class="achievements-list">
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">35% improvement in customer adoption through business-centric features</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">30% improvement in user engagement through data-driven mechanics</span>
+                                </li>
+                                <li class="achievement-point">
+                                    <div class="bullet"></div>
+                                    <span class="achievement-text">Enhanced clinical workflow automation reducing manual tasks</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tech-section">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Healthcare SaaS</span>
+                                <span class="tech-tag">B2B Platforms</span>
+                                <span class="tech-tag">Clinical Workflows</span>
+                                <span class="tech-tag">User Experience</span>
+                                <span class="tech-tag">Engagement Analytics</span>
+                            </div>
+                        </div>
+                        <div class="impact-statement">
+                            <h4>Business Impact</h4>
+                            <p class="impact-text">"Transformed healthcare SaaS platform adoption and user engagement through strategic product initiatives."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overall Impact Summary -->
+            <div style="margin-top: 64px; background: white; padding: 32px; border-radius: 16px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); border: 1px solid #e5e7eb;">
+                <h3 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin-bottom: 32px; text-align: center;">Cumulative Leadership Impact</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #2563eb; margin-bottom: 8px;">30%</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Average Cost Reduction</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">Across optimization initiatives</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #10b981; margin-bottom: 8px;">25%</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Process Efficiency Gains</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">Through automation & AI</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 700; color: #8b5cf6; margin-bottom: 8px;">40%</div>
+                        <div style="color: #374151; font-weight: 500; margin-bottom: 4px;">Decision Speed Improvement</div>
+                        <div style="font-size: 0.875rem; color: #6b7280;">Executive dashboard systems</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact fade-in">
+        <div class="section-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Open to discussing Head/Director level opportunities in Technical Product Management, Program Management, strategic consulting, and thought leadership collaborations.</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:sudhanshurg@gmail.com" class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p>sudhanshurg@gmail.com</p>
+                    </div>
+                </a>
+                
+                <a href="tel:+91-7303436488" class="contact-item">
+                    <div class="contact-icon" style="background: #d1fae5; color: #065f46;">📱</div>
+                    <div class="contact-info">
+                        <h4>Phone</h4>
+                        <p>+91-7303436488, +91-9650261122</p>
+                    </div>
+                </a>
+                
+                <div class="contact-item">
+                    <div class="contact-icon" style="background: #e9d5ff; color: #7c3aed;">📍</div>
+                    <div class="contact-info">
+                        <h4>Location</h4>
+                        <p>Greater Noida West, India</p>
+                    </div>
+                </div>
+                
+                <a href="https://www.linkedin.com/in/sudhanshu-s-jha/" target="_blank" class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-info">
+                        <h4>LinkedIn</h4>
+                        <p>Connect on LinkedIn</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="availability-card">
+                <h4 class="availability-title">Current Availability</h4>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>Open to Head/Director level opportunities</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>Available for strategic consulting projects</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-dot"></div>
+                        <span>Speaking & thought leadership opportunities</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid #e5e7eb;">
+                <button style="border: 2px solid #d1d5db; background: transparent; color: #374151; padding: 12px 24px; border-radius: 8px; font-size: 1.125rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">
+                    📄 Download Resume
+                </button>
+                <p style="margin-top: 24px; color: #6b7280; font-size: 0.875rem;">
+                    <strong style="color: #374151;">Response Time:</strong> Typically within 24 hours for professional inquiries. Available for immediate start on the right opportunity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Sudhanshu Shekhar Jha</h3>
+                    <p class="footer-text">Senior Technical Product & Program Manager specializing in healthcare SaaS, enterprise data platforms, and Gen AI-powered solutions.</p>
+                    <div class="footer-meta">18+ years experience • Greater Noida West, India</div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Professional Focus</h3>
+                    <div style="color: #d1d5db; font-size: 0.875rem; line-height: 1.6;">
+                        <div>• Technical Product Management</div>
+                        <div>• Program & Delivery Leadership</div>
+                        <div>• Healthcare SaaS Platforms</div>
+                        <div>• Gen AI Implementation</div>
+                        <div>• Strategic Consulting</div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Let's Connect</h3>
+                    <div class="footer-links">
+                        <a href="mailto:sudhanshurg@gmail.com" class="footer-link">
+                            📧 sudhanshurg@gmail.com
+                        </a>
+                        <a href="tel:+91-7303436488" class="footer-link">
+                            📱 +91-7303436488, +91-9650261122
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudhanshu-s-jha/" target="_blank" class="footer-link">
+                            💼 LinkedIn Profile
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter-card">
+                        <h5 class="newsletter-title">Tech PMx Junction</h5>
+                        <p class="newsletter-desc">Professional newsletter sharing real-world lessons in product, project, and program management.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2024 Sudhanshu Shekhar Jha. All rights reserved.</div>
+                <div class="footer-nav">
+                    <button onclick="scrollToTop()" class="footer-nav-link">Back to Top</button>
+                    <div class="footer-nav-link">Available for senior leadership roles</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile menu toggle (basic)
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            const menu = document.querySelector('.nav-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
